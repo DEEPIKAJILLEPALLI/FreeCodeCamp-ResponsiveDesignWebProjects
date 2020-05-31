@@ -1,0 +1,144 @@
+body {
+    color: darkblue;
+    background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+}
+
+#header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    
+}
+
+h1 {
+    color: orchid;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+}
+
+#header-img {
+    border-radius: 50%;
+}
+
+#nav-bar {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-gap: 10px;
+    align-items: center;
+    margin-left: 600px;
+    float: right;
+}
+
+#nav-bar a:link {
+    text-decoration: none;
+    font-size: 20px;
+    font-style: italic;
+    color: purple;
+    padding: 10px;
+}
+
+a {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: oldlace;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+#video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* border-radius: 20px; */
+    margin-bottom: 20px;
+    width:50%;
+    height: auto;
+  padding-top:100px
+
+}
+
+#pricing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pricing-card {
+    width: 250px;
+    height: 200px;
+    ;
+    background-color: rgb(161, 190, 190);
+    border-radius: 30px;
+    margin: auto;
+}
+
+.pricing-card span {
+    width: 100px;
+}
+
+#features,
+#how {
+    position: relative;
+    background-color: hsl(302, 59%, 88%);
+    height: auto;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    overflow-x: visible;
+}
+
+@media screen and (max-width: 600px) {
+    #nav-bar a {
+        float: none;
+        width: 100%;
+    }
+
+    #video {
+        width: 100%;
+    }
+    .pricing-card{
+        margin: auto;
+    }
+
+
+}
+
+input {
+    width: 800px;
+    height: 40px;
+    border-style: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+input[type=submit] {
+    background-color: darkcyan;
+    width: 100px;
+   
+}
+
+label {
+    margin-left:150px;
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+#form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin: auto;
+
+}
