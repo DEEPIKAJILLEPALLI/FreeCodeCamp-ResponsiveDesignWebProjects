@@ -1,0 +1,280 @@
+<html>
+
+<head>
+    <title>Javascript Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header id="header">JS Documentation</header>
+        <ul >
+            <li> <a href="#Brief_History_Of_JS" class="nav-link">Brief History Of JS</a>
+            </li>
+            <li> <a href="#Introduction_to_JavaScript" class="nav-link">Introduction to JavaScript</a>
+            </li>
+            <li> <a href="#How_Does_JS_Works" class="nav-link">How Does JS Works</a>
+            </li>
+            <li> <a href="#Comments_In_JS" class="nav-link">Comments In JS</a>
+            </li>
+            <li> <a href="#Strict_mode" class="nav-link">Strict Mode</a>
+            </li>
+            <li> <a href="#Variables" class="nav-link">Variables</a>
+            </li>
+            <li> <a href="#Scope_of_Variables" class="nav-link">Scope of Variables</a>
+            </li>
+            <li> <a href="#Interaction_in_JS" class="nav-link">Interaction in JS</a>
+            </li>
+            <li> <a href="#Operators_in_JS" class="nav-link">Operators in JS</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Brief_History_Of_JS">
+            <header>Brief History Of JS</header>
+            <p>
+                Initially,called as LiveScript.But,At that time word JAVA and Script were very popular, the name
+                Javascript Came into existence.
+
+                Created to “make web pages alive”.i.e; To Add Dynamic functionality to the webPage. By the way,Js is
+                totally different from JAVA.
+            </p>
+            <p>Later,Javascript became fully independent language with its own specification called ECMAScript.
+                [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) is a scripting-language specification
+                standardized by Ecma International. </p>
+        </section>
+        <section class="main-section" id="Introduction_to_JavaScript">
+            <header>Introduction to JavaScript</header>
+            <p> JavaScript can execute not only in the browser, but also on the server, or actually on any device that
+                has a special program called the JavaScript engine.</p>
+            <p>The browser has an embedded engine sometimes called a “JavaScript virtual machine”.</p>
+            <pre>
+      Different javascript Engines:  
+      V8 - Chrome and Opera  
+      SpiderMonkey - Firefox  
+      Trident and Chakra - IE different Versions  
+      ChakraCore- Microsoft Edge  
+      Nitro and SquirrelSqaush- Safari
+      </pre>
+        </section>
+        <section class="main-section" id="How_Does_JS_Works">
+            <header>How Does JS Works</header>
+            <ul>
+                <li>Engines are complicated. But the basics are easy.</li>
+                <li> The engine (embedded if it’s a browser) reads (“parses”) the script.</li>
+                <li>Then it converts (“compiles”) the script to the machine language.</li>
+                <li> And then the machine code runs, pretty fast.</li>
+                <li>The engine applies optimizations at each step of the process.</li>
+                <li> <strong>Transpilation:</strong> Conversion of code into js "before they run in the browser."</li>
+            </ul>
+
+
+            <u><b>Examples:</b></u>
+            <p> TypeScript,CoffeeScript,Flow etc.,</p>
+            <p><b> we attach a script to a webpage ?</b></p>
+            <pre>
+            Using "Script" Tag
+            <code> 
+            The "script" tag contains JavaScript code which is automatically executed when the browser processes the tag.
+                Few Attributes of "script" The type attribute: script type=… The old HTML standard, HTML4, required a
+                script to have a type. Usually it was type="text/javascript" . It’s not required anymore. The language
+                attribute: script language=… This attribute was meant to show the language of the script.JavaScript is
+                the default language. There is no need to use it. External "Script" File 
+                script src="/path/to/script.js" 
+            </code>
+           
+            If src is set, the script content is ignored.
+
+            Statements , Semicolon and Comments In JS</pre>
+        </section>
+        <section class="main-section" id="Comments_In_JS">
+        <header>Comments In JS</header>
+        <code>
+            <pre>// Single line Comment :work's fine as "automatic semicolon insertion" was made by JS
+                alert('Hello')
+                alert('World')
+                </pre>
+        </code>
+        <code>
+            <pre>  alert("helloo");
+                [1, 2].forEach(alert)
+                /* multi line comments: there will be an error brcause alert doesn't contain semicolon ,but in some cases
+                js
+                interprets the line break as an “implicit” semicolon. This is called an automatic semicolon insertion.*/
+                alert("There will be an error")
+
+                [1, 2].forEach(alert)
+                // how actually,js sees above code ?
+                alert("There will be an error")[1, 2].forEach(alert)</pre>
+
+        </code>
+        </section>
+
+        <section class="main-section" id="Strict_mode">
+            <header>Strict mode</header>
+            <ol>
+                <li>The "use strict" directive switches the engine to the “modern” mode, changing the behavior of some
+                    built-in features.</li>
+                <li> Strict mode is enabled by placing "use strict" at the top of a script or function. Several language
+                    features, like “classes” and “modules”, enable strict mode automatically.</li>
+                <li>Strict mode is supported by all modern browsers.It is recommended to always use starting scripts
+                    with "use
+                    strict".</li>
+            </ol>
+
+
+        </section>
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <p> JavaScript application needs to work with information,to store that information we use Variable's which
+                are
+                named storage for data.</p>
+            <p>To create a variable in JavaScript, use the <em><b>let, const and var</b></em> keyword.</p>
+            <p><b>let -</b> modern way of declaring variable.</p>
+            <p><b>var -</b> old way of declaring variable.</p>
+            <p><b>const -</b> same as let, but,once value is assigned can't be changed.</p>
+
+            <h5>Variable Naming</h5>
+            <ol>
+                <li>The name must contain only letters, digits, or the symbols $ and _.</li>
+                <li>The first character must not be a digit.</li>
+                <li>Case senisitive</li>
+                <li>Reserved Name's cannot be used as variable name's.</li>
+            </ol>
+
+            <p><u>we can use a variable without declaring it in js.</u></p>
+            <ul>
+                <li>JS uses Variable hosting concept if the variable is not defined ,it declare's in global scope(Window
+                    level)</li>
+                <li> so you should be cautious while naming your variable's,because,they might override the window level
+                    existing
+                    variable's.</li>
+                <li> -"STRICT MODE" cause an error, if we try to assign an value to variable without defining it!</li>
+            </ul>-.
+
+
+        </section>
+        <section class="main-section" id="Scope_of_Variables">
+            <header>Scope of Variables</header>
+            <p>When you declare a variable outside of any function, it is called a global variable, because it is
+                available to any other code in the current document. When you declare a variable within a function, it
+                is called a local variable, because it is available only within that function.</p>
+            <p>
+
+                JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared
+                within a block is local to the function (or global scope) that the block resides within. For example the
+                following code will log 5, because the scope of x is the function (or global context) within which x is
+                declared, not the block, which in this case is an if statement.
+
+            </p>
+            <code>
+                <pre>if (true) { var x = 5; } console.log(x); // 5
+                This behavior changes, when using the let declaration introduced in ECMAScript 2015.
+
+                if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
+                defined</pre></code>
+
+        </section>
+        <section class="main-section" id="Interaction_in_JS">
+            <header> Interaction in JS</header>
+            <ol>
+                <li> alert: `alert(message);`</li>
+                <li>prompt : `result = prompt(title, [default]);`</li>
+                <li> confirm : `result = confirm(question);`</li>
+            </ol>
+
+
+
+            <pre>
+           Example :
+
+            <code>
+                let name = prompt('What's Your Name ?', "christopher");
+                alert(`You name ${name} sounds good.`);
+            </code>
+            `The second parameter is optional, but if we don’t supply it, Internet Explorer will insert the text
+            "undefined"
+            into the prompt.`
+           
+            Example :
+            <code>
+                let question = confirm("you are learning Javascript?");
+                alert(question);
+            </code>
+            </pre>
+        </section>
+        <section class="main-section" id="Operators_in_JS">
+            <header>Operators in JS</header>
+            <ul>
+                <li>Conditional</li>
+                <li>Logical </li>
+            </ul>
+            <h5>Conditional Operators:</h5>
+            <p>Similar to other Programming languages `if.. else` blocks
+                Example</p>
+            <code>
+                let age = prompt('How old are you?', '');
+
+                if (age 18) {
+                alert("you are adult");
+                } else {
+                alert("you are child");
+                }
+            </code>
+            <h5>Logical Operators:</h5>
+            OR : || use this symbol instead of 'or' in example
+            <pre>
+                |Operator| Symbol|Example|
+                |--------|-------|-------|
+                |OR | or | `if(age18 or age < 30){alert('You are in adult stage');}`| |AND|`&&`| `if(age=18 && typeof
+                            age=="number" ){alert('You are in adult stage');}`| |NOT |!|`alert( !true )`| Loops while
+            </pre>
+            <pre>
+        <b>while</b>
+             <code>
+                while (condition) {
+                // code
+                // so-called "loop body"
+                }
+                </code>
+               <b>do.. while</b> 
+                <code>
+                    do {
+                    // loop body
+                    } while (condition);
+                </code>
+                <b>for</b>
+                <code>
+                    for (begin; condition; step) {
+                    // ... loop body ...
+                    }
+                </code>
+                To Break the loop use `break;`
+                To Continue to the next iteration use `continue`
+    
+               <b>Switch</b> 
+                <p>A switch statement can replace multiple if checks.</p>
+                <code>
+                    switch(x) {
+                    case 'value1': // if (x === 'value1')
+                    ...
+                    [break]
+    
+                    case 'value2': // if (x === 'value2')
+                    ...
+                    [break]
+    
+                    default:
+                    ...
+                    [break]
+                    }
+                    
+                </pre>
+            </code>
+
+            <ul>
+                <li>Several variants of case which share the same code can be grouped,just dont put break after case and
+                    write
+                    the code in last case followed by break; which has similar code of previous case.</li>
+                <li>Case Value is type sensitive .The values must be of the same type to match.</li>
+            </ul></section> </main> </body> </html>
