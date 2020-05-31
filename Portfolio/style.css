@@ -1,0 +1,118 @@
+body {
+    background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+}
+
+h1 {
+    color: purple;
+}
+
+h5 {
+    color: teal;
+    margin-top: auto;
+    font-size: small;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    background-color: rgb(226, 250, 250);
+    width: 100%;
+    ;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: teal;
+    float: right;
+    padding: 20px;
+
+}
+
+#welcome-section
+{
+    margin: 150px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+     height: 100vh ;
+
+}
+#profile-link {
+    margin: 50px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+
+}
+#projects {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-tile {
+    width: 200px;
+    height: 200px;
+    background-color: plum;
+    margin: auto;
+}
+@media screen and (max-width: 600px) {
+    #navbar a {
+        float: none;
+        width: 100%;
+    }
+  
+  }
+  #Contact,#About{
+      display: flex;
+      justify-content: center;
+      margin:100px;
+  }
+  ul.social-list {
+    padding: 0;
+    margin: 20px;
+}
+
+ul.social-list li {
+    padding: 0;
+    display: inline-block;
+    margin: auto;
+}
+
+ul.social-list li a {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    line-height: 35px;
+    border: 1px solid teal;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+ul.social-list li:nth-child(1) a:hover {
+    background-color: #3b5998;
+    border: transparent;
+}
+
+ul.social-list li:nth-child(2) a:hover {
+    background-color: #8a3ab9;
+    border: transparent;
+    background-image: linear-gradient(to top, #8a3ab9, #e95950, #bc2a8d, #fccc63, #fbad50, #cd486b, #4c68d7);
+    /* background-image: radial-gradient(circle, #8a3ab9 24.71% , #e95950 44.71%  , #bc2a8d 60.78% ); */
+    /* background-image: linear-gradient(to right, #8a3ab9 24.71% , #e95950 13.71%  , #bc2a8d 13.78% ,#fccc63 13%,#fbad50 13%,#cd486b 13%,#4c68d7 13%); */
+}
+
+ul.social-list li:nth-child(3) a:hover {
+    background-color: #00aced;
+    border: transparent;
+}
+
+ul.social-list li:nth-child(4) a:hover {
+    background-color: #dd4b39;
+    border: transparent;
+}
